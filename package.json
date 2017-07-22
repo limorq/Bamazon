@@ -1,0 +1,25 @@
+{
+  "name": "liri-node-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "keys.js",
+  "dependencies": {
+    "console.table": "^0.8.0",
+    "node-spotify-api": "^1.0.5",
+    "spotify-data": "0.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/limorq/liri-node-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/limorq/liri-node-app/issues"
+  },
+  "homepage": "https://github.com/limorq/liri-node-app#readme"
+}
