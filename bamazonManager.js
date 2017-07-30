@@ -17,7 +17,7 @@ function Command() {
 	{
 		name: "command",
 		type: "list",
-		message: "Choose your command:",
+		message: "\nChoose your command:",
 		choices: [
 			"View products for sale",
 			"View low inventory",
@@ -47,7 +47,7 @@ function viewProducts() {
 		function(err, results) {
 				for (var j=0; j<results.length; j++) {
 				console.log("Item ID:" + results[j].item_id + 
-					"\nPoduct Name:" + results[j].product_name + "\nDept:" + results[j].dept_name + "\nPrice: $" +results[j].price + "\nStock Quantity:" + results[j].stock_quantity + "\nProduct Sales:" + results[j].product_sales + "\n");
+					"\nPoduct Name:" + results[j].product_name + "\nDept:" + results[j].dept_name + "\nPrice: $" +results[j].price + "\nStock Quantity:" + results[j].stock_quantity + "\n");
 				}
 				Command();
 		}
@@ -58,7 +58,7 @@ function viewLowInventory() {
 	connection.query("SELECT * FROM products WHERE stock_quantity < 5",
 		function(err, res) {
 			for (var j=0; j<res.length; j++) {
-				console.log("\nItem: " + res[j].product_name);
+				console.log("\nItem: " + res[j].product_name + "\nInventory: " + res[j].stock_quantity + "\n");
 			}
 			Command();
 		}
@@ -87,7 +87,7 @@ function addInventory() {
 			],
 			function(err, res) {
 				if (err) throw(err);
-				console.log("Quantity has been updated.");
+				console.log("\n" + answer.item + " has been updated.\n");
 				Command();
 			}
 		);
@@ -114,12 +114,17 @@ function createNewProduct() {
 				message: "What is the price for each unit?"
 			}
 		]).then(function(answers) {
-			console.log(answers.newProduct);
-			connection.query("INSERT INTO products (product_name, dept_name, price, stock_quantity, product_sales) VALUES ?",
-				[answers.newProduct, answers.dept, answers.price, answers.number, 100],
+
+			connection.query("INSERT INTO products SET ?",
+					{
+						product_name: answers.newProduct,
+						dept_name: answers.dept,
+						stock_quantity: answers.price,
+						price: answers.price
+					},
 				function(err, res) {
 				 	if (err) throw(err);
-					console.log("Item added.");
+					console.log("\n" + answers.newProduct + " has been added.");
 					Command();
 				}
 			);
