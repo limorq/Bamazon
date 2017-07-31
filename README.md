@@ -1,6 +1,6 @@
 # Bamazon
 
-This is an Amazon-like storefront using mySQL that will take in orders from customers and deplete stock from the stor's inventory. The app has two programs, one for customers and one for managers.
+This is an Amazon-like storefront using mySQL that will take in orders from customers and deplete stock from the store's inventory. The app has two programs, one for customers and one for managers.
 
 The customer app will show users a list of available products for sale and ask for their choice. Once the user has selected their choice, they will be asked the quantity of their choice. The app will then verify product availabbility and then process the order by updating inventory and showing the user the amount due. 
 
@@ -23,21 +23,21 @@ Low inventory will display all products where the inventory is below 5 items:
 
 ![](https://github.com/limorq/Bamazon/blob/master/images/Capture5.PNG)
 
-The manager has an option to add inventory. The database table reveals there areonly 4 Gucci Sandals available:
+The manager has an option to add inventory. The database table reveals there are only 4 Gucci Sandals available:
 
-![]https://github.com/limorq/Bamazon/blob/master/images/table1.PNG)
+![](https://github.com/limorq/Bamazon/blob/master/images/table1.PNG)
 
 Once the manager selects to add inventory:
 
-![]https://github.com/limorq/Bamazon/blob/master/images/Capture6.PNG)
+![](https://github.com/limorq/Bamazon/blob/master/images/Capture6.PNG)
 
 Then we see the table has been updated in the database:
 
-![]https://github.com/limorq/Bamazon/blob/master/images/table2.PNG)
+![](https://github.com/limorq/Bamazon/blob/master/images/table2.PNG)
 
 Finally, the manager can add products:
 
-![]https://github.com/limorq/Bamazon/blob/master/images/Capture7.PNG)
-![]https://github.com/limorq/Bamazon/blob/master/images/table3.PNG)
+![](https://github.com/limorq/Bamazon/blob/master/images/Capture7.PNG)
+![](https://github.com/limorq/Bamazon/blob/master/images/table3.PNG)
 
 
