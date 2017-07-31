@@ -119,7 +119,7 @@ function createNewProduct() {
 					{
 						product_name: answers.newProduct,
 						dept_name: answers.dept,
-						stock_quantity: answers.price,
+						stock_quantity: answers.number,
 						price: answers.price
 					},
 				function(err, res) {
