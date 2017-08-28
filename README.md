@@ -13,7 +13,7 @@ If there is not enough inventory for the customer's order, a message displays in
 
 The manager app will allow managers to view inventory, view low inventory below 5 items, add inventory, and create new products:
 
-![](https://github.com/limorq/Bamazon/blob/master/images/Capture3.PNG)
+![](https://github.com/limorq/Bamazon/blob/master/images/Capture3.jpg)
 
 The view of the entire inventory will display as follows:
 
@@ -25,19 +25,19 @@ Low inventory will display all products where the inventory is below 5 items:
 
 The manager has an option to add inventory. The database table reveals there are only 4 Gucci Sandals available:
 
-![](https://github.com/limorq/Bamazon/blob/master/images/table1.PNG)
+![](https://github.com/limorq/Bamazon/blob/master/images/table1.jpg)
 
 Once the manager selects to add inventory:
 
-![](https://github.com/limorq/Bamazon/blob/master/images/Capture6.PNG)
+![](https://github.com/limorq/Bamazon/blob/master/images/Capture6.jpg)
 
 Then we see the table has been updated in the database:
 
-![](https://github.com/limorq/Bamazon/blob/master/images/table2.PNG)
+![](https://github.com/limorq/Bamazon/blob/master/images/table2.jpg)
 
 Finally, the manager can add products:
 
 ![](https://github.com/limorq/Bamazon/blob/master/images/Capture7.PNG)
-![](https://github.com/limorq/Bamazon/blob/master/images/table3.PNG)
+![](https://github.com/limorq/Bamazon/blob/master/images/table3.jpg)
 
 
