@@ -1,15 +1,12 @@
 var inquirer = require('inquirer');
 var mysql = require('mysql');
-
 var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
   password : 'claire2316',
   database : 'Bamazon_db'
 });
-
 connection.connect();
-
 //command option function
 function Command() {
 //List menu options
@@ -41,7 +38,6 @@ function Command() {
 		}
 	});
 }
-
 function viewProducts() {
 	connection.query("SELECT * FROM products",
 		function(err, results) {
@@ -53,7 +49,6 @@ function viewProducts() {
 		}
 	);	
 }
-
 function viewLowInventory() {
 	connection.query("SELECT * FROM products WHERE stock_quantity < 5",
 		function(err, res) {
@@ -64,7 +59,6 @@ function viewLowInventory() {
 		}
 	);	
 }
-
 function addInventory() {
 	inquirer.prompt([
 		{
@@ -93,7 +87,6 @@ function addInventory() {
 		);
 	});	
 }
-
 function createNewProduct() {
 	inquirer.prompt(
 		[
