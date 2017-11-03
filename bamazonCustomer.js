@@ -1,15 +1,12 @@
 var inquirer = require('inquirer');
 var mysql = require('mysql');
-
 var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
   password : 'claire2316',
   database : 'Bamazon_db'
 });
-
 connection.connect();
-
 function ask() {
 	connection.query("SELECT * FROM products", function(err, result) {
 		console.log("\n");
@@ -17,7 +14,6 @@ function ask() {
 			console.log("ID: " + result[i].item_id + " " + result[i].product_name + "  Price: $" + result[i].price + "  In Stock: " + result[i].stock_quantity);
 		}
 	});
-
 	inquirer.prompt ([
 		{
 			name: "itemId",
@@ -51,7 +47,6 @@ function ask() {
 		);
 	});
 }
-
 function updateDB (ix, quantity) {
 	connection.query("UPDATE products SET ? WHERE ?",
 		[
@@ -73,13 +68,8 @@ function updateDB (ix, quantity) {
 		}
 	);
 }
-
 function showCost(ix, quant, price, sales) {
 	var purchase = quant * price;
 	console.log("\nThe total cost of your purchase will be: $" + purchase + "\n");
 }
-
 ask();
- 
-
-
